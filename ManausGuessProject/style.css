@@ -1,0 +1,279 @@
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    display: none;
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    z-index: 3;
+    width: 20%;
+    border-radius: 20px;
+    background: #f5f5f5;
+    padding: 1.5rem;
+    border: 10px solid #596b39;
+    transition: 0.5s ease-out;
+    overflow: visible;
+}
+
+.card-details {
+    color: black;
+    height: 100%;
+    gap: .1em;
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+
+.card-button {
+    transform: translate(-50%, 125%);
+    width: 60%;
+    border-radius: 1rem;
+    border: none;
+    background-color: #008bf8;
+    color: #fff;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    opacity: 0;
+    transition: 0.3s ease-out;
+}
+
+.text-body {
+    color: #262626;
+    font-weight: 500;
+}
+.rounds-jogo {
+    color: #262626;
+    font-weight: 500;
+}
+
+/*Text*/
+.text-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/*Hover*/
+.card:hover {
+    border-color: #2980b9;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+
+.card:hover .card-button {
+    transform: translate(-50%, 50%);
+    opacity: 1;
+}
+
+.mybutton {
+    display: none;
+    position: absolute;
+    top: 70%;
+    left: 44%;
+    z-index: 5;
+    --hover-shadows: 16px 16px 33px #596b39, -16px -16px 33px #596b39;
+    --accent: #596b39;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    border: none;
+    border-radius: 1.1em;
+    background-color: #596b39;
+    cursor: pointer;
+    color: white;
+    padding: 1em 2em;
+    transition: box-shadow ease-in-out 0.3s, background-color ease-in-out 0.1s,
+    letter-spacing ease-in-out 0.1s, transform ease-in-out 0.1s;
+    box-shadow: 13px 13px 10px #1c1c1c, -13px -13px 10px #262626;
+}
+
+.mybutton:hover {
+    box-shadow: var(--hover-shadows);
+}
+
+.mybutton:active {
+    box-shadow: var(--hover-shadows), var(--accent) 0px 0px 30px 5px;
+    background-color: var(--accent);
+    transform: scale(0.95);
+}
+
+
+@keyframes shake3856 {
+    0% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+
+    20% {
+        -webkit-transform: translate(-2px, 2px);
+        transform: translate(-2px, 2px);
+    }
+
+    40% {
+        -webkit-transform: translate(-2px, -2px);
+        transform: translate(-2px, -2px);
+    }
+
+    60% {
+        -webkit-transform: translate(2px, 2px);
+        transform: translate(2px, 2px);
+    }
+
+    80% {
+        -webkit-transform: translate(2px, -2px);
+        transform: translate(2px, -2px);
+    }
+
+    100% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+}
+
+
+#map {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 62%;
+    z-index: 5;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #FFFFFF;
+    text-align: center;
+    font-family: "Roboto", "sans-serif";
+    line-height: 30px;
+    height: 45%;
+    width: 35%;
+}
+
+#pano {
+    display: none;
+    width: 100%;
+    height: 100vh;
+}
+
+.timer {
+    display: none;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    z-index: 5;
+    font-size: 3rem;
+    color: #1c1c1c;
+    background-color: #596b39;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    padding: 10px 20px;
+    animation: contagem 1s ease-out;
+}
+
+@keyframes contagem {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.slideshow-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.mySlides {
+    display: none;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 3s;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    color: #fdfdfe;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0px #596b39,
+    1px 2px 0px #596b39,
+    1px 3px 0px #596b39,
+    1px 4px 0px #596b39,
+    1px 5px 0px #596b39,
+    1px 6px 0px #596b39,
+    1px 10px 5px rgba(16, 16, 16, 0.5),
+    1px 15px 10px rgba(16, 16, 16, 0.4),
+    1px 20px 30px rgba(16, 16, 16, 0.3),
+    1px 25px 50px rgba(16, 16, 16, 0.2);
+}
+
+#button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #596b39;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#button:hover {
+    background-color: #2980b9;
+}
+
+@keyframes fade {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.content {
+    display: none;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+.final-game {
+    position: absolute;
+    top: -20%;
+    left: 30%;
+    z-index: 1;
+    display: flex;
+    font-size: 8em;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.pontuacao-final{
+    position: absolute;
+    top: 1%;
+    left: 35%;
+    z-index: 1;
+    display: flex;
+    font-size: 2em;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}

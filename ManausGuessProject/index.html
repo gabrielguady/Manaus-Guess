@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manaus guesser</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+
+
+<div class="slideshow-container">
+    <div class="mySlides fade">
+        <img src="pexels-kelly-1179532-17291265.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="pexels-eliezer-nunes-300283905-24029700.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <img alt="teatro amazonas" src="pexels-kelly-1179532-17291233.jpg" style="width:100%">
+    </div>
+
+    <div class="container">
+        <h1>Manaus Guess</h1>
+        <a id="button" >Iniciar Jogo</a>
+    </div>
+</div>
+<div id="pano">
+    <div class="card">
+        <div class="card-details">
+            <p class="text-title">Card title</p>
+            <p class="text-body">Here are the details of the card</p>
+            <p class="rounds-jogo">Round 1/5</p>
+        </div>
+        <button class="card-button">very nice</button>
+    </div>
+</div>
+<div id="map"></div>
+<div class="timer">60</div>
+<button class="mybutton">adivinhe a localização
+</button>
+<div class="content">
+    <img alt="teatro amazonas" src="pexels-eliezer-nunes-300283905-24029700.jpg" style="width:100%">
+    <h1 class="final-game">FIM DE JOGO</h1>
+    <p class="pontuacao-final">Sua pontuação final é de 0000 pontos</p>
+</div>
+
+<script src="app.js"></script>
+<!-- Inclui a API do Google Maps com sua chave de API -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAePhmflHA-pRftv7WjGqXQESli7rKtrew&callback=showSlides" async defer></script>
+</body>
+</html>
